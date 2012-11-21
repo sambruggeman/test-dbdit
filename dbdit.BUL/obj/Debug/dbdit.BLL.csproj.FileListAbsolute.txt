@@ -1,0 +1,17 @@
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\obj\Debug\ResolveAssemblyReference.cache
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\dbdit.DAL.dll
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\Unity.Mvc3.dll
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\EntityFramework.dll
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\dbdit.DAL.pdb
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\EntityFramework.xml
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\dbdit.BLL.dll
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\bin\Debug\dbdit.BLL.pdb
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\obj\Debug\dbdit.BLL.dll
+D:\Data\SB9393\Other data\Tests\Test dbdit\dbdit.BUL\obj\Debug\dbdit.BLL.pdb
