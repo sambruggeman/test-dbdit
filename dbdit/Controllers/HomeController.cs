@@ -51,7 +51,7 @@ namespace dbdit.Controllers
             return View();
         }
 
-        [Authorize(Roles = Constants.Admin)]
+        [Authorize(Roles = Constants.RoleAdmin)]
         public ActionResult Contact()
         {
             BResult result;

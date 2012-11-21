@@ -7,10 +7,17 @@ namespace dbdit.BLL.Lib
 {
     public static class Constants
     {
+        /* ConnectionStringName */
+        public const string ConnectionString = "DefaultConnection";
+
+        /* RootAdmin */
+        public const string AdminUserName = "Sam";
+        public const string AdminPassword = "P@ssw0rd";
+
         /* Roles */
-        public const string Admin = "Admin";
-        public const string Moderator = "Moderator";
-        public const string User = "User";
+        public const string RoleAdmin = "Admin";
+        public const string RoleModerator = "Moderator";
+        public const string RoleUser = "User";
 
         /* Cultures */
         public const string nlBE = "nl-BE";
@@ -34,6 +41,5 @@ namespace dbdit.BLL.Lib
         public const string TooManyResults = "TooManyResults";
 
         /* BUSINESS PROPERTIES */
-
     }
 }

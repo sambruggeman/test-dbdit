@@ -16,14 +16,8 @@ namespace dbdit
 
     public class MvcApplication : System.Web.HttpApplication
     {
-        private const string adminRole = "Admin";
-        private const string adminUserName = "Sam";
-        private const string adminPassword = "P@ssw0rd";
-
         protected void Application_Start()
         {
-            InitSecurity();
-
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
@@ -33,27 +27,6 @@ namespace dbdit
             AuthConfig.RegisterAuth();
 
             Bootstrapper.Initialise();
-
-        }
-
-        public static void InitSecurity()
-        {
-            WebMatrix.WebData.WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfiles", "Id", "UserName", autoCreateTables: true);
-
-            if (!Roles.RoleExists(adminRole))
-            {
-                Roles.CreateRole(adminRole);
-            }
-
-            if (!WebSecurity.UserExists(adminUserName))
-            {
-                WebSecurity.CreateUserAndAccount(adminUserName, adminPassword);
-            }
-
-            if (!Roles.IsUserInRole(adminUserName, adminRole))
-            {
-                Roles.AddUserToRole(adminUserName, adminRole);
-            }
         }
     }
 }

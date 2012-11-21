@@ -5,6 +5,8 @@ using System.Threading;
 using System.Web.Mvc;
 using WebMatrix.WebData;
 using dbdit.Models;
+using System.Web.Security;
+using dbdit.BLL.Lib;
 
 namespace dbdit.Filters
 {
@@ -23,27 +25,35 @@ namespace dbdit.Filters
 
         private class SimpleMembershipInitializer
         {
+            private const string adminRole = Constants.RoleAdmin;
+            private const string adminUserName = Constants.AdminUserName;
+            private const string adminPassword = Constants.AdminPassword;
+
             public SimpleMembershipInitializer()
             {
-                //Database.SetInitializer<UsersContext>(null);
+                try
+                {
+                    WebMatrix.WebData.WebSecurity.InitializeDatabaseConnection(Constants.ConnectionString, "UserProfiles", "Id", "UserName", autoCreateTables: true);
 
-                //try
-                //{
-                //    using (var context = new UsersContext())
-                //    {
-                //        if (!context.Database.Exists())
-                //        {
-                //            // Create the SimpleMembership database without Entity Framework migration schema
-                //            ((IObjectContextAdapter)context).ObjectContext.CreateDatabase();
-                //        }
-                //    }
+                    if (!Roles.RoleExists(adminRole))
+                    {
+                        Roles.CreateRole(adminRole);
+                    }
 
-                //    WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
-                //}
-                //catch (Exception ex)
-                //{
-                //    throw new InvalidOperationException("The ASP.NET Simple Membership database could not be initialized. For more information, please see http://go.microsoft.com/fwlink/?LinkId=256588", ex);
-                //}
+                    if (!WebSecurity.UserExists(adminUserName))
+                    {
+                        WebSecurity.CreateUserAndAccount(adminUserName, adminPassword);
+                    }
+
+                    if (!Roles.IsUserInRole(adminUserName, adminRole))
+                    {
+                        Roles.AddUserToRole(adminUserName, adminRole);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new InvalidOperationException("The ASP.NET Simple Membership database could not be initialized. For more information, please see http://go.microsoft.com/fwlink/?LinkId=256588", ex);
+                }
             }
         }
     }
